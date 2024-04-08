@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div className="mx-auto p-8 min-h-screen  flex flex-col items-center justify-center bg-gradient-to-t from-indigo-100 via-fuchsia-400 to-indigo-100  ">
       <h1 className="animate-bounce text-5xl font-bold mb-4 bg-gradient-to-r  from-black to-gray-500 bg-clip-text text-transparent">
-        Word Wave
+        Image Generate
       </h1>
       
       <Alphabet selectLetter={selectLetter} />

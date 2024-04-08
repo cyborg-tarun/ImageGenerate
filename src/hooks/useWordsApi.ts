@@ -26,7 +26,12 @@ const useWordsApi = (allWordsFromLetter: string[]) => {
       for (const word of allWordsFromLetter) {
         try {
           const response = await axios.get(
+
             `https://c2c6-2401-4900-1c5c-8c3e-3d4b-4e3f-43a6-943.ngrok-free.app/generate?prompt=${word}`, 
+
+              //change the URL of API
+
+
             {responseType: 'blob',
               headers: {
                 // Set the ngrok-skip-browser-warning header to any value
