@@ -18,6 +18,14 @@
         npm install
       ```
 
+      change the Image generation api 
+      ```bash 
+      goto \src\hooks\useWordsApi.ts
+      ```
+      change the api URL
+
+      we are getting image data form (URL) with (generate) api having GET request (prompt)
+
 3. **Run the application:**
      ```bash
          npm run dev
