@@ -9,7 +9,7 @@ declare var SpeechRecognition: any;
 
 const App = () => {
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
-  const [selectedWord, setSelectedWord] = useState<string | null>(null);
+  
  
 
   // get the details for the selected word from the wordsData.json
@@ -17,12 +17,10 @@ const App = () => {
 
   const selectLetter = (letter: string) => {
     setSelectedLetter(letter);
-    setSelectedWord(null);
+    
   };
 
-  const selectWord = (word: string) => {
-    setSelectedWord(word);
-  };
+  
 
   return (
     <div className="mx-auto p-8 min-h-screen  flex flex-col items-center justify-center bg-gradient-to-t from-indigo-100 via-fuchsia-400 to-indigo-100  ">

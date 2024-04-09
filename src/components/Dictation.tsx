@@ -4,16 +4,16 @@ import WordDetails from './WordDetails';
 
 const Dictation = () => {
   const { transcript, startListening, stopListening, hasRecognitionSupport } = useSpeechToText();
-  const [selectedWord, setSelectedWord] = useState<string>('');
+  const [spokenWords, setSpokenWords] = useState<string[]>([]);
 
   // Function to handle fetching data for the selected word
   const handleFetchData = () => {
-    setSelectedWord(transcript.trim()); // Set the selected word as the transcript
+    setSpokenWords(prevWords => [...prevWords, transcript.trim()]); // Add the selected word to the array of spoken words
   };
 
   return (
     <div className="items-center justify-center">
-      {hasRecognitionSupport ? (
+      {hasRecognitionSupport? (
         <>
           <div>
             <textarea
@@ -42,7 +42,7 @@ const Dictation = () => {
         <h1>Browser issue</h1>
       )}
       {/* Pass the selected word to the WordDetails component */}
-      {selectedWord && (<WordDetails selectedWord={selectedWord} />)}
+      {spokenWords.length > 0 && (<WordDetails allWordsFromLetter={spokenWords} />)}
       
     </div>
   );
