@@ -12,12 +12,12 @@ const WordDetails = ({allWordsFromLetter}: WordDetailsProps) => {
   if (error) return <p>Error</p>;
 
   return (
-    <div className="w-full px-4 md:px-4 py-3 pb-8 flex-col flex justify-center items-center">
-      <div className="flex items-center flex-col justify-center w-full md:w-6/12 ">
+    <div className="w-full px-4 md:px-4 py-3 pb-8 flex flex-wrap justify-center items-center">
+      <div className="flex items-center justify-center w-full md:w-6/12 ">
         {/* Animation for Image  */}
         {data.map((image, index) => (
-          <div key={index} className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-            <div className="h-96 w-72">
+          <div key={index} className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 p-3">
+            <div className="h-96 w-86">
               <img
                 src={image}
                 alt={allWordsFromLetter[index]}
