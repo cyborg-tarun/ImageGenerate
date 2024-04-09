@@ -15,7 +15,8 @@
 ```
 
 2. **Install Dependencies:**
-   
+
+   python 3.10
 
 system shoud have cuda toolkit intalled 
 pytorch verion:-
