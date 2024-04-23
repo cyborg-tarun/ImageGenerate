@@ -9,7 +9,7 @@ declare var SpeechRecognition: any;
 
 const App = () => {
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
-  
+  //const [commonWords, setCommonWords] = useState<Record<string, string[]>>(wordsData.commonWords);
  
 
   // get the details for the selected word from the wordsData.json
@@ -20,6 +20,11 @@ const App = () => {
     
   };
 
+  // const handleNewWords = (newWords: string[]) => {
+  //   if (selectedLetter) {
+  //     setCommonWords({ ...commonWords, [selectedLetter]: newWords });
+  //   }
+  // };
   
 
   return (
@@ -35,7 +40,7 @@ const App = () => {
             <Words
               selectedLetter={selectedLetter}
               words={commonWords[selectedLetter]}
-              // selectWord={selectWord}
+             // updateNewWords={handleNewWords}
             />
           )}
           <div className="w-full">
