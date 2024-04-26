@@ -26,8 +26,7 @@ def generate_new_words():
     return jsonify({'new_gen_words': new_gen_words}), 200
 
 
+
 if __name__ == '__main__':
     app.run(debug=True)
-    
-
     

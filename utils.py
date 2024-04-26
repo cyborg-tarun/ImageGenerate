@@ -17,7 +17,11 @@ def generate_image(prompt):
 
 
 def generate_related_words(current_word):
-    final_list = []
+    
+    
+    if current_word:
+        current_word = current_word.split(' ')[0]
+    
     
     prompt_synsets = wn.synsets(current_word, pos=wn.NOUN)
    
@@ -31,13 +35,21 @@ def generate_related_words(current_word):
  
        
     if related_words:
-        final_list.append(random.sample(related_words, 3))
- 
-    return final_list
-
-
-
-
+        final_list = random.sample(related_words, 3)
+   
+    
+  
+    
+    list_1= []
+    for wordd in final_list:
+        one = current_word.lower()
+        two = wordd.lower()
+        if one not in two:
+            two = str(one) + " " + str(two)
+            
+        list_1.append(two)
+    
+    return list_1
 
 
 
